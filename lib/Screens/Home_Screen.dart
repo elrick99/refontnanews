@@ -15,7 +15,7 @@ class _HommeSrceenState extends State<HommeSrceen> {
     print(provider.items);
     return Scaffold(
       backgroundColor: Colors.grey[300],
-      appBar: AppBar(),
+
       body: SingleChildScrollView(
         child: Column(
           children: [

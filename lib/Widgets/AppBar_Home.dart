@@ -8,6 +8,12 @@ class AppBarHome extends StatefulWidget {
 class _AppBarHomeState extends State<AppBarHome> {
 
   bool couleur= false;
+  bool couleur1= false;
+  bool couleur2= false;
+  bool couleur3= false;
+  bool couleur4= false;
+  bool couleur5= false;
+  bool couleur6= false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -79,64 +85,113 @@ class _AppBarHomeState extends State<AppBarHome> {
                                         padding: const EdgeInsets.all(8.0),
                                         child: InkWell(
                                           onTap: (){
-                                            couleur=!couleur;
+                                            setState(() {
+                                              couleur=!couleur;
+                                            });
                                           },
                                           child: Container(child: Text( 
-                                            "La maison",
+                                            "Suivre",
                                            style: TextStyle(
-                                            color:Colors.grey
+                                           color:(couleur)?Colors.red:Colors.grey,
                                           ),
                                           ),),
                                         ),
                                       ),
                                         Padding(
                                         padding: const EdgeInsets.all(8.0),
-                                        child: Container(child: Text("La maison",
-                                         style: TextStyle(
-                                          color:Colors.black87,
-                                          fontWeight: FontWeight.bold
+                                        child: InkWell(
+                                          onTap: (){
+                                            setState(() {
+                                              couleur1=!couleur1;
+                                            });
+                                          },
+                                          child: Container(child: Text( 
+                                            "Pour-vous",
+                                           style: TextStyle(
+                                           color:(couleur1)?Colors.red:Colors.grey,
+                                          ),
+                                          ),),
                                         ),
-                                        ),),
                                       ),
                                         Padding(
                                         padding: const EdgeInsets.all(8.0),
-                                        child: Container(child: Text("La maison",
-                                         style: TextStyle(
-                                          color:Colors.grey
+                                        child: InkWell(
+                                          onTap: (){
+                                            setState(() {
+                                              couleur2=!couleur2;
+                                            });
+                                          },
+                                          child: Container(child: Text( 
+                                            "CoronaVirus",
+                                           style: TextStyle(
+                                           color:(couleur2)?Colors.red:Colors.grey,
+                                          ),
+                                          ),),
                                         ),
-                                        ),),
                                       ),
                                         Padding(
                                         padding: const EdgeInsets.all(8.0),
-                                        child: Container(child: Text( "La maison",
-                                        style: TextStyle(
-                                          color:Colors.grey
+                                        child:  InkWell(
+                                          onTap: (){
+                                            setState(() {
+                                              couleur3=!couleur3;
+                                            });
+                                          },
+                                          child: Container(child: Text( 
+                                            "Footbaal",
+                                           style: TextStyle(
+                                           color:(couleur3)?Colors.red:Colors.grey,
+                                          ),
+                                          ),),
                                         ),
-                                        ),),
                                       ),
                                         Padding(
                                         padding: const EdgeInsets.all(8.0),
-                                        child: Container(child: Text("La maison",
-                                         style: TextStyle(
-                                          color:Colors.grey
+                                        child:  InkWell(
+                                          onTap: (){
+                                            setState(() {
+                                              couleur4=!couleur4;
+                                            });
+                                          },
+                                          child: Container(child: Text( 
+                                            "La maison",
+                                           style: TextStyle(
+                                           color:(couleur4)?Colors.red:Colors.grey,
+                                          ),
+                                          ),),
                                         ),
-                                        ),),
                                       ),
                                          Padding(
                                         padding: const EdgeInsets.all(8.0),
-                                        child: Container(child: Text("La maison",
-                                         style: TextStyle(
-                                          color:Colors.grey
+                                        child:  InkWell(
+                                          onTap: (){
+                                            setState(() {
+                                              couleur5=!couleur5;
+                                            });
+                                          },
+                                          child: Container(child: Text( 
+                                            "Politique",
+                                           style: TextStyle(
+                                           color:(couleur5)?Colors.red:Colors.grey,
+                                          ),
+                                          ),),
                                         ),
-                                        ),),
                                       ),
                                          Padding(
                                         padding: const EdgeInsets.all(8.0),
-                                        child: Container(child: Text("La maison",
-                                         style: TextStyle(
-                                          color:Colors.grey
+                                        child:  InkWell(
+                                          onTap: (){
+                                            setState(() {
+                                              couleur6=!couleur6;
+                                            });
+                                          },
+                                          child: Container(child: Text( 
+                                            "Sociaux",
+                                           style: TextStyle(
+                                           color:(couleur6)?Colors.red:Colors.grey,
+                                          ),
+                                          ),),
                                         ),
-                                        ),),
                                       )
                                     ],
                                   ),

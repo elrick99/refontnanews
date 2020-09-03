@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:refontnanews/Providers/Services/Informations.dart';
 import 'package:refontnanews/Screens/Home_Screen.dart';
+import 'package:refontnanews/Widgets/AppBar_Home.dart';
 import 'package:refontnanews/Widgets/BottomBar.dart';
 
 void main() {
