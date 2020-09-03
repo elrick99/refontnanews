@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:refontnanews/Screens/Home_Screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
        
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Home(title: 'Flutter Demo Home Page'),
+      home: HomeScreen(),
     );
   }
 }
