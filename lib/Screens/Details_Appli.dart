@@ -147,6 +147,82 @@ class _DetailAppliState extends State<DetailAppli> {
                         ],
                       ),
                     ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 50,
+                              width: 50,
+                              child: Icon(
+                                Icons.call,
+                                color: Colors.white,
+                              ),
+                              decoration: BoxDecoration(
+                                  color: Colors.green,
+                                  borderRadius: BorderRadius.circular(100)),
+                            ),
+                            Container(
+                              child: Text("Whatshapp"),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 50,
+                              width: 50,
+                              child: Icon(
+                                Icons.enhanced_encryption,
+                                color: Colors.white,
+                              ),
+                              decoration: BoxDecoration(
+                                  color: Colors.red,
+                                  borderRadius: BorderRadius.circular(100)),
+                            ),
+                            Container(
+                              child: Text(
+                                "Partager",
+                                style: TextStyle(color: Colors.grey),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 50,
+                              width: 50,
+                              child: Icon(
+                                Icons.error,
+                                color: Colors.black,
+                              ),
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  border: Border.all(color: Colors.black),
+                                  borderRadius: BorderRadius.circular(100)),
+                            ),
+                            Container(
+                              child: Text(
+                                "Signalé",
+                                style: TextStyle(color: Colors.grey),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
