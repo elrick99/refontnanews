@@ -134,6 +134,7 @@ class _DetailAppliState extends State<DetailAppli> {
                           Container(
                             height: 50,
                             width: 50,
+                            child: Icon(Icons.thumb_up, color: Colors.white,),
                             decoration: BoxDecoration(
                               color: Colors.red,
                               borderRadius: BorderRadius.circular(100)
@@ -156,14 +157,15 @@ class _DetailAppliState extends State<DetailAppli> {
                         Container(
                           height: 50,
                           width: 50,
+                           child: Icon(Icons.call, color: Colors.white,),
                           decoration: BoxDecoration(
-                              color: Colors.red,
+                              color: Colors.green,
                               borderRadius: BorderRadius.circular(100)
                           ),
                         ),
                          Container(
                           
-                          child: Text("J'aime"),
+                          child: Text("Whatshapp"),
                         )
                       ],
                     ),
@@ -178,6 +180,7 @@ class _DetailAppliState extends State<DetailAppli> {
                         Container(
                           height: 50,
                           width: 50,
+                          child: Icon(Icons.enhanced_encryption, color: Colors.white,),
                           decoration: BoxDecoration(
                               color: Colors.red,
                               borderRadius: BorderRadius.circular(100)
@@ -185,7 +188,9 @@ class _DetailAppliState extends State<DetailAppli> {
                         ),
                          Container(
                           
-                          child: Text("J'aime"),
+                          child: Text("Partager",
+                          style: TextStyle(color: Colors.grey),
+                          ),
                         )
                       ],
                     ),
@@ -200,14 +205,18 @@ class _DetailAppliState extends State<DetailAppli> {
                         Container(
                           height: 50,
                           width: 50,
+                           child: Icon(Icons.error, color: Colors.black,),
                           decoration: BoxDecoration(
-                              color: Colors.red,
+                              color: Colors.white,
+                              border: Border.all(color: Colors.black),
                               borderRadius: BorderRadius.circular(100)
                           ),
                         ),
                          Container(
                           
-                          child: Text("J'aime"),
+                          child: Text("Signalé",
+                           style: TextStyle(color: Colors.grey),
+                          ),
                         )
                       ],
                     ),
@@ -543,32 +552,34 @@ class _DetailAppliState extends State<DetailAppli> {
                                   width: 80,
                                   color: Colors.black,
                                 ),
-                                Container(
-                                  height: 80,
-                                  width: 250,
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Container(
-                                          child: Text("le ministre Hamede Bakayoko a change le nom de la comune abobo "),
-                                        ),
-                                      ),
+                                Expanded(
+                                  child: Container(
+                                    height: 80,
+                                    width: 250,
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      
+                                      children: [
                                         Padding(
                                           padding: const EdgeInsets.all(8.0),
                                           child: Container(
-                                           
-                                          child: Text("Benson il y a 16h",
-                                          style: TextStyle(
-                                            color: Colors.black38
+                                            child: Text("le ministre Hamede Bakayoko a change le nom de la comune abobo "),
                                           ),
-                                          ),
-                                      ),
-                                        )
-                                    ],
+                                        ),
+                                          Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Container(
+                                             
+                                            child: Text("Benson il y a 16h",
+                                            style: TextStyle(
+                                              color: Colors.black38
+                                            ),
+                                            ),
+                                        ),
+                                          )
+                                      ],
+                                    ),
                                   ),
                                 )
                               ],
@@ -585,32 +596,34 @@ class _DetailAppliState extends State<DetailAppli> {
                                   width: 80,
                                   color: Colors.black,
                                 ),
-                                Container(
-                                  height: 80,
-                                  width: 250,
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Container(
-                                          child: Text("le ministre Hamede Bakayoko a change le nom de la comune abobo "),
-                                        ),
-                                      ),
+                                Expanded(
+                                  child: Container(
+                                    height: 80,
+                                    width: 250,
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      
+                                      children: [
                                         Padding(
                                           padding: const EdgeInsets.all(8.0),
                                           child: Container(
-                                           
-                                          child: Text("Benson il y a 16h",
-                                          style: TextStyle(
-                                            color: Colors.black38
+                                            child: Text("le ministre Hamede Bakayoko a change le nom de la comune abobo "),
                                           ),
-                                          ),
-                                      ),
-                                        )
-                                    ],
+                                        ),
+                                          Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Container(
+                                             
+                                            child: Text("Benson il y a 16h",
+                                            style: TextStyle(
+                                              color: Colors.black38
+                                            ),
+                                            ),
+                                        ),
+                                          )
+                                      ],
+                                    ),
                                   ),
                                 )
                               ],
@@ -627,32 +640,34 @@ class _DetailAppliState extends State<DetailAppli> {
                                   width: 80,
                                   color: Colors.black,
                                 ),
-                                Container(
-                                  height: 80,
-                                  width: 250,
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Container(
-                                          child: Text("le ministre Hamede Bakayoko a change le nom de la comune abobo "),
-                                        ),
-                                      ),
+                                Expanded(
+                                  child: Container(
+                                    height: 80,
+                                    width: 250,
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      
+                                      children: [
                                         Padding(
                                           padding: const EdgeInsets.all(8.0),
                                           child: Container(
-                                           
-                                          child: Text("Benson il y a 16h",
-                                          style: TextStyle(
-                                            color: Colors.black38
+                                            child: Text("le ministre Hamede Bakayoko a change le nom de la comune abobo "),
                                           ),
-                                          ),
-                                      ),
-                                        )
-                                    ],
+                                        ),
+                                          Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Container(
+                                             
+                                            child: Text("Benson il y a 16h",
+                                            style: TextStyle(
+                                              color: Colors.black38
+                                            ),
+                                            ),
+                                        ),
+                                          )
+                                      ],
+                                    ),
                                   ),
                                 )
                               ],
