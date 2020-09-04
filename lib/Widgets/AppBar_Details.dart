@@ -6,9 +6,68 @@ class AppBarDetail extends StatefulWidget {
 }
 
 class _AppBarDetailState extends State<AppBarDetail> {
+  static const stateItems = <String>[
+    'Favoris',
+    'Partager',
+    'Signaler',
+    'Text',
+  ];
+
+  final List<PopupMenuItem<String>> _dropDownMenuItems = stateItems
+      .map((String values) => PopupMenuItem<String>(
+            value: values,
+            child: Text(values),
+          ))
+      .toList();
+  String _btnSelectedVal = 'Neuf';
+
   bool siteWeb = false;
   bool appliWeb = true;
-  // Widget siteWeb(){}
+
+  Widget siteWebButton() {
+    return InkWell(
+      onTap: () {
+        setState(() {
+          appliWeb = true;
+          siteWeb = false;
+          print(2);
+        });
+      },
+      child: Container(
+        height: MediaQuery.of(context).size.height,
+        child: Icon(Icons.format_align_left, color: Color(0xFF777FFF)),
+        decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.only(
+              topRight: Radius.circular(5),
+              bottomRight: Radius.circular(5),
+            )),
+      ),
+    );
+  }
+
+  Widget appliWebButton() {
+    return InkWell(
+      onTap: () {
+        setState(() {
+          appliWeb = false;
+          siteWeb = true;
+          print(1);
+        });
+      },
+      child: Container(
+        height: MediaQuery.of(context).size.height,
+        child: Icon(Icons.format_align_left, color: Colors.white),
+        decoration: BoxDecoration(
+            color: Colors.black.withOpacity(0.01),
+            borderRadius: BorderRadius.only(
+              topRight: Radius.circular(5),
+              bottomRight: Radius.circular(5),
+            )),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,32 +102,24 @@ class _AppBarDetailState extends State<AppBarDetail> {
                               style: TextStyle(color: Colors.white),
                             ))),
                         Expanded(
-                            child: InkWell(
-                          onTap: () {
-                            appliWeb = true;
-                            siteWeb = false;
-                          },
-                          child: Container(
-                            height: MediaQuery.of(context).size.height,
-                            child: Icon(Icons.format_align_left,
-                                color: Color(0xFF777FFF)),
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.only(
-                                  topRight: Radius.circular(5),
-                                  bottomRight: Radius.circular(5),
-                                )),
-                          ),
-                        ))
+                            child: (appliWeb == true)
+                                ? appliWebButton()
+                                : siteWebButton())
                       ],
                     ),
                     decoration: BoxDecoration(
                         color: Colors.black.withOpacity(0.5),
                         borderRadius: BorderRadius.circular(5)),
                   ),
-                  IconButton(
+                  PopupMenuButton<String>(
                       icon: Icon(Icons.more_horiz, color: Colors.white),
-                      onPressed: null)
+                      onSelected: (String newValue) {
+                        setState(() {
+                          _btnSelectedVal = newValue;
+                          print(_btnSelectedVal);
+                        });
+                      },
+                      itemBuilder: (_) => this._dropDownMenuItems)
                 ],
               ),
             ),

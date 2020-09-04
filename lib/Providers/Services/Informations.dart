@@ -15,44 +15,49 @@ class Informations with ChangeNotifier {
       countLike: 20,
       date: '2020-09-03 11:13:55',
       siteWeb: 'OperaNews.com',
+      url:
+          'https://ci.opera.news/ci/fr/law-justice/f7e26015117e0f80eee1de0f480f63c5',
     ),
     Information(
-      idInfo: 1,
-      title: 'Education: Resultat du BAC',
-      description:
-          'Les résultats du baccalauréat session 2020 sont connus depuis le 14 août. Malgré une année scolaire en dent de scie due aux grèves, mais également à la Covid-19 certains élèves et établissements se sont démarqués de la masse. Ainsi sur les 51 meilleurs bacheliers 2020, 23 sont des filles soit 45% et 55% des garçons soit 28 jeunes garçons.',
-      image:
-          'https://res.6chcdn.feednews.com/assets/v2/2fed6a1f7579712e171e67ab6c1c8f33?quality=uhq&format=jpeg&resize=720',
-      countComment: 45,
-      countLike: 20,
-      date: '2020-09-01 11:13:55',
-      siteWeb: 'OperaNews.com',
-    ),
+        idInfo: 1,
+        title: 'Education: Resultat du BAC',
+        description:
+            'Les résultats du baccalauréat session 2020 sont connus depuis le 14 août. Malgré une année scolaire en dent de scie due aux grèves, mais également à la Covid-19 certains élèves et établissements se sont démarqués de la masse. Ainsi sur les 51 meilleurs bacheliers 2020, 23 sont des filles soit 45% et 55% des garçons soit 28 jeunes garçons.',
+        image:
+            'https://res.6chcdn.feednews.com/assets/v2/2fed6a1f7579712e171e67ab6c1c8f33?quality=uhq&format=jpeg&resize=720',
+        countComment: 45,
+        countLike: 20,
+        date: '2020-09-01 11:13:55',
+        siteWeb: 'OperaNews.com',
+        url:
+            'https://ci.opera.news/ci/fr/education/cbf2eba322a0ee28026b8bf61aaa3849'),
     Information(
-      idInfo: 2,
-      title:
-          'Un manifestant poignarde un policier lors d\'une marche et se rend compte que c\'est son oncle',
-      description:
-          'Lors des Marches de protestation, l\'on assiste très souvent à des échauffourées qui aboutissent à des situations dramatiques. Lisons cette histoire qui dépeint la situation d\'un jeune élève qui regrette son acte posé pendant une marche de protestation',
-      image:
-          'https://res.6chcdn.feednews.com/assets/v2/645f11f22623cdbc7868aa30d048f5c0?quality=uhq&format=webp&resize=720',
-      countComment: 45,
-      countLike: 20,
-      date: '2020-09-01 11:13:55',
-      siteWeb: 'OperaNews.com',
-    ),
+        idInfo: 2,
+        title:
+            'Un manifestant poignarde un policier lors d\'une marche et se rend compte que c\'est son oncle',
+        description:
+            'Lors des Marches de protestation, l\'on assiste très souvent à des échauffourées qui aboutissent à des situations dramatiques. Lisons cette histoire qui dépeint la situation d\'un jeune élève qui regrette son acte posé pendant une marche de protestation',
+        image:
+            'https://res.6chcdn.feednews.com/assets/v2/645f11f22623cdbc7868aa30d048f5c0?quality=uhq&format=webp&resize=720',
+        countComment: 45,
+        countLike: 20,
+        date: '2020-09-01 11:13:55',
+        siteWeb: 'OperaNews.com',
+        url:
+            'https://ci.opera.news/ci/fr/crime/e38c9cc31e2602b6800685a18e1f9d5f'),
     Information(
-      idInfo: 3,
-      title: 'Education: Resultat du BAC',
-      description:
-          'Les résultats du baccalauréat session 2020 sont connus depuis le 14 août. Malgré une année scolaire en dent de scie due aux grèves, mais également à la Covid-19 certains élèves et établissements se sont démarqués de la masse. Ainsi sur les 51 meilleurs bacheliers 2020, 23 sont des filles soit 45% et 55% des garçons soit 28 jeunes garçons.',
-      image:
-          'https://res.6chcdn.feednews.com/assets/v2/2fed6a1f7579712e171e67ab6c1c8f33?quality=uhq&format=jpeg&resize=720',
-      countComment: 45,
-      countLike: 20,
-      date: '2020-09-01 11:13:55',
-      siteWeb: 'OperaNews.com',
-    ),
+        idInfo: 3,
+        title: 'Education: Resultat du BAC',
+        description:
+            'Les résultats du baccalauréat session 2020 sont connus depuis le 14 août. Malgré une année scolaire en dent de scie due aux grèves, mais également à la Covid-19 certains élèves et établissements se sont démarqués de la masse. Ainsi sur les 51 meilleurs bacheliers 2020, 23 sont des filles soit 45% et 55% des garçons soit 28 jeunes garçons.',
+        image:
+            'https://res.6chcdn.feednews.com/assets/v2/2fed6a1f7579712e171e67ab6c1c8f33?quality=uhq&format=jpeg&resize=720',
+        countComment: 45,
+        countLike: 20,
+        date: '2020-09-01 11:13:55',
+        siteWeb: 'OperaNews.com',
+        url:
+            'https://ci.opera.news/ci/fr/education/cbf2eba322a0ee28026b8bf61aaa3849'),
     Information(
       idInfo: 4,
       title:
@@ -65,35 +70,39 @@ class Informations with ChangeNotifier {
       countLike: 20,
       date: '2020-09-03 11:13:55',
       siteWeb: 'OperaNews.com',
+      url:
+          'https://ci.opera.news/ci/fr/law-justice/f7e26015117e0f80eee1de0f480f63c5',
     ),
     Information(
-      idInfo: 5,
-      title:
-          'Un manifestant poignarde un policier lors d\'une marche et se rend compte que c\'est son oncle',
-      description:
-          'Lors des Marches de protestation, l\'on assiste très souvent à des échauffourées qui aboutissent à des situations dramatiques. Lisons cette histoire qui dépeint la situation d\'un jeune élève qui regrette son acte posé pendant une marche de protestation',
-      image:
-          'https://res.6chcdn.feednews.com/assets/v2/645f11f22623cdbc7868aa30d048f5c0?quality=uhq&format=webp&resize=720',
-      countComment: 45,
-      countLike: 20,
-      date: '2020-09-01 11:13:55',
-      siteWeb: 'OperaNews.com',
-    ),
+        idInfo: 5,
+        title:
+            'Un manifestant poignarde un policier lors d\'une marche et se rend compte que c\'est son oncle',
+        description:
+            'Lors des Marches de protestation, l\'on assiste très souvent à des échauffourées qui aboutissent à des situations dramatiques. Lisons cette histoire qui dépeint la situation d\'un jeune élève qui regrette son acte posé pendant une marche de protestation',
+        image:
+            'https://res.6chcdn.feednews.com/assets/v2/645f11f22623cdbc7868aa30d048f5c0?quality=uhq&format=webp&resize=720',
+        countComment: 45,
+        countLike: 20,
+        date: '2020-09-01 11:13:55',
+        siteWeb: 'OperaNews.com',
+        url:
+            'https://ci.opera.news/ci/fr/crime/e38c9cc31e2602b6800685a18e1f9d5f'),
     Information(
-      idInfo: 5,
-      title:
-          'Violation de l\'espace de l\'Eglise catholique : voici la sanction qui guette Kobenan Adjoumani',
-      description:
-          'La Côte d\'Ivoire est secouée de toutes parts, depuis l\'annonce de la candidature du président Alassane Ouattara, à un troisième mandat. Marches de protestation réprimées, emprisonnements de manifestants, destruction de bien publics et privés, morts d\'hommes. Tout ça, à deux mois de la présidentielle, dont '
-          'les conditions ne sont pas réunies pour une élection apaisée, juste, crédible et transparente'
-          ', selon Tidjane Thiam, qui l\'a exprimé sur le plateau de TV5',
-      image:
-          'https://res.6chcdn.feednews.com/assets/v2/3f6a984f88e065575840dcdb7e02140f?quality=uhq&format=webp&resize=720',
-      countComment: 45,
-      countLike: 20,
-      date: '2020-09-02 17:55:44',
-      siteWeb: 'OperaNews.com',
-    ),
+        idInfo: 5,
+        title:
+            'Violation de l\'espace de l\'Eglise catholique : voici la sanction qui guette Kobenan Adjoumani',
+        description:
+            'La Côte d\'Ivoire est secouée de toutes parts, depuis l\'annonce de la candidature du président Alassane Ouattara, à un troisième mandat. Marches de protestation réprimées, emprisonnements de manifestants, destruction de bien publics et privés, morts d\'hommes. Tout ça, à deux mois de la présidentielle, dont '
+            'les conditions ne sont pas réunies pour une élection apaisée, juste, crédible et transparente'
+            ', selon Tidjane Thiam, qui l\'a exprimé sur le plateau de TV5',
+        image:
+            'https://res.6chcdn.feednews.com/assets/v2/3f6a984f88e065575840dcdb7e02140f?quality=uhq&format=webp&resize=720',
+        countComment: 45,
+        countLike: 20,
+        date: '2020-09-02 17:55:44',
+        siteWeb: 'OperaNews.com',
+        url:
+            'https://ci.opera.news/ci/fr/crime/e38c9cc31e2602b6800685a18e1f9d5f'),
   ];
   List<Information> get items {
     return [..._items];

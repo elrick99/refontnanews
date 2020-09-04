@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:refontnanews/Providers/Services/Informations.dart';
+import 'package:refontnanews/Screens/Details_Appli.dart';
 import 'package:refontnanews/Widgets/AppBar_Home.dart';
 
 class HommeSrceen extends StatefulWidget {
@@ -23,7 +24,7 @@ class _HommeSrceenState extends State<HommeSrceen> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Container(
-              height: 100,
+              height: 120,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(color: Colors.amber),
               child: AppBarHome(),
@@ -74,7 +75,14 @@ class _HommeSrceenState extends State<HommeSrceen> {
                           return Padding(
                             padding: const EdgeInsets.only(bottom: 8.0),
                             child: InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (_) => DetailAppli(
+                                              urls: dataInformation[index].url,
+                                            )));
+                              },
                               child: Container(
                                 height: MediaQuery.of(context).size.height / 3,
                                 width: 230,
@@ -149,100 +157,111 @@ class _HommeSrceenState extends State<HommeSrceen> {
                   ...dataInformation
                       .map((e) => Padding(
                             padding: const EdgeInsets.only(bottom: 8.0),
-                            child: Container(
-                              height: MediaQuery.of(context).size.height / 5,
-                              width: MediaQuery.of(context).size.width,
-                              decoration: BoxDecoration(),
-                              child: Card(
-                                child: Row(
-                                  children: [
-                                    Expanded(
-                                      flex: 2,
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Padding(
-                                            padding: const EdgeInsets.only(
-                                                left: 8.0),
-                                            child: Text(e.title,
-                                                maxLines: 2,
-                                                overflow: TextOverflow.ellipsis,
-                                                style: TextStyle(
-                                                    fontWeight: FontWeight.bold,
-                                                    fontSize: 20)),
-                                          ),
-                                          Container(
-                                            child: Row(
-                                              children: [
-                                                Container(
-                                                  height: 40,
-                                                  width: 50,
-                                                  decoration: BoxDecoration(
-                                                      color: Colors.white),
-                                                  child: Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .spaceAround,
-                                                    children: [
-                                                      Icon(Icons.thumb_up,
-                                                          size: 20,
-                                                          color: Colors.grey),
-                                                      Text(
-                                                          e.countLike
-                                                              .toString(),
-                                                          style: TextStyle(
-                                                              color:
-                                                                  Colors.grey))
-                                                    ],
-                                                  ),
-                                                ),
-                                                Container(
-                                                  height: 40,
-                                                  width: 50,
-                                                  decoration: BoxDecoration(
-                                                      color: Colors.white),
-                                                  child: Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .spaceAround,
-                                                    children: [
-                                                      Icon(Icons.comment,
-                                                          size: 20,
-                                                          color: Colors.grey),
-                                                      Text(
-                                                          e.countComment
-                                                              .toString(),
-                                                          style: TextStyle(
-                                                              color:
-                                                                  Colors.grey))
-                                                    ],
-                                                  ),
-                                                ),
-                                                Container(
-                                                  child: Text(
-                                                      e.siteWeb.trimRight(),
-                                                      maxLines: 1,
-                                                      overflow:
-                                                          TextOverflow.ellipsis,
-                                                      style: TextStyle(
-                                                          color: Colors.grey)),
-                                                )
-                                              ],
+                            child: InkWell(
+                              onTap: () => Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (_) => DetailAppli(
+                                            urls: e.url,
+                                          ))),
+                              child: Container(
+                                height: MediaQuery.of(context).size.height / 5,
+                                width: MediaQuery.of(context).size.width,
+                                decoration: BoxDecoration(),
+                                child: Card(
+                                  child: Row(
+                                    children: [
+                                      Expanded(
+                                        flex: 2,
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 8.0),
+                                              child: Text(e.title,
+                                                  maxLines: 2,
+                                                  overflow:
+                                                      TextOverflow.ellipsis,
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      fontSize: 20)),
                                             ),
-                                          )
-                                        ],
+                                            Container(
+                                              child: Row(
+                                                children: [
+                                                  Container(
+                                                    height: 40,
+                                                    width: 50,
+                                                    decoration: BoxDecoration(
+                                                        color: Colors.white),
+                                                    child: Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .spaceAround,
+                                                      children: [
+                                                        Icon(Icons.thumb_up,
+                                                            size: 20,
+                                                            color: Colors.grey),
+                                                        Text(
+                                                            e.countLike
+                                                                .toString(),
+                                                            style: TextStyle(
+                                                                color: Colors
+                                                                    .grey))
+                                                      ],
+                                                    ),
+                                                  ),
+                                                  Container(
+                                                    height: 40,
+                                                    width: 50,
+                                                    decoration: BoxDecoration(
+                                                        color: Colors.white),
+                                                    child: Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .spaceAround,
+                                                      children: [
+                                                        Icon(Icons.comment,
+                                                            size: 20,
+                                                            color: Colors.grey),
+                                                        Text(
+                                                            e.countComment
+                                                                .toString(),
+                                                            style: TextStyle(
+                                                                color: Colors
+                                                                    .grey))
+                                                      ],
+                                                    ),
+                                                  ),
+                                                  Container(
+                                                    child: Text(
+                                                        e.siteWeb.trimRight(),
+                                                        maxLines: 1,
+                                                        overflow: TextOverflow
+                                                            .ellipsis,
+                                                        style: TextStyle(
+                                                            color:
+                                                                Colors.grey)),
+                                                  )
+                                                ],
+                                              ),
+                                            )
+                                          ],
+                                        ),
                                       ),
-                                    ),
-                                    Expanded(
-                                        child: Container(
-                                      decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                            image: NetworkImage(e.image),
-                                            fit: BoxFit.cover),
-                                      ),
-                                    ))
-                                  ],
+                                      Expanded(
+                                          child: Container(
+                                        decoration: BoxDecoration(
+                                          image: DecorationImage(
+                                              image: NetworkImage(e.image),
+                                              fit: BoxFit.cover),
+                                        ),
+                                      ))
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
@@ -258,54 +277,65 @@ class _HommeSrceenState extends State<HommeSrceen> {
                         itemBuilder: (context, index) {
                           return Padding(
                             padding: const EdgeInsets.only(bottom: 8.0),
-                            child: Container(
-                              height: MediaQuery.of(context).size.height / 3,
-                              width: 270,
-                              // decoration: BoxDecoration(color: Colors.yellow),
-                              child: Card(
-                                elevation: 7,
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      height:
-                                          MediaQuery.of(context).size.height /
-                                                  3 -
-                                              100,
-                                      width: MediaQuery.of(context).size.width,
-                                      decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                            image: NetworkImage(
-                                                dataInformation[index].image),
-                                            fit: BoxFit.cover),
-                                      ),
-                                    ),
-                                    Expanded(
-                                      child: Container(
+                            child: InkWell(
+                              onTap: () => Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (_) => DetailAppli(
+                                            urls: dataInformation[index].url,
+                                          ))),
+                              child: Container(
+                                height: MediaQuery.of(context).size.height / 3,
+                                width: 270,
+                                // decoration: BoxDecoration(color: Colors.yellow),
+                                child: Card(
+                                  elevation: 7,
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        height:
+                                            MediaQuery.of(context).size.height /
+                                                    3 -
+                                                100,
                                         width:
                                             MediaQuery.of(context).size.width,
-                                        // decoration:
-                                        //     BoxDecoration(color: Colors.red[300]),
-                                        child: Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceAround,
-                                            children: [
-                                              Text(dataInformation[index].title,
-                                                  style: TextStyle(
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontSize: 20)),
-                                              Text(dataInformation[index]
-                                                  .siteWeb)
-                                            ],
-                                          ),
+                                        decoration: BoxDecoration(
+                                          image: DecorationImage(
+                                              image: NetworkImage(
+                                                  dataInformation[index].image),
+                                              fit: BoxFit.cover),
                                         ),
                                       ),
-                                    )
-                                  ],
+                                      Expanded(
+                                        child: Container(
+                                          width:
+                                              MediaQuery.of(context).size.width,
+                                          // decoration:
+                                          //     BoxDecoration(color: Colors.red[300]),
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceAround,
+                                              children: [
+                                                Text(
+                                                    dataInformation[index]
+                                                        .title,
+                                                    style: TextStyle(
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontSize: 20)),
+                                                Text(dataInformation[index]
+                                                    .siteWeb)
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),

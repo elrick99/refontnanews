@@ -5,6 +5,7 @@ import 'package:refontnanews/Screens/Details_Appli.dart';
 import 'package:refontnanews/Screens/Home_Screen.dart';
 import 'package:refontnanews/Widgets/AppBar_Home.dart';
 import 'package:refontnanews/Widgets/BottomBar.dart';
+import 'package:refontnanews/Widgets/WebView.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,8 +28,8 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: DetailAppli(),
-        // home: BottomBar(),
+        // home: WebWiew(),
+        home: BottomBar(),
       ),
     );
   }

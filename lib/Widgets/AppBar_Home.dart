@@ -26,7 +26,7 @@ class _AppBarHomeState extends State<AppBarHome> {
                 child: Column(
                   children: [
                     SizedBox(
-                      height: 30,
+                      height: 40,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -58,6 +58,16 @@ class _AppBarHomeState extends State<AppBarHome> {
                         Container(
                           height: 30,
                           width: 200,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(Icons.search, color: Colors.grey),
+                              Text(
+                                'Recherche',
+                                style: TextStyle(color: Colors.grey),
+                              ),
+                            ],
+                          ),
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(30)),

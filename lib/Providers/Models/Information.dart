@@ -6,6 +6,7 @@ class Information with ChangeNotifier {
   final String description;
   final String image;
   final String siteWeb;
+  final String url;
   final int countLike;
   final int countComment;
   final String date;
@@ -16,6 +17,7 @@ class Information with ChangeNotifier {
       this.description,
       this.image,
       this.siteWeb,
+      this.url,
       this.countLike,
       this.countComment,
       this.date});
