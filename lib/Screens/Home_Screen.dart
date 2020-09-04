@@ -20,6 +20,7 @@ class _HommeSrceenState extends State<HommeSrceen> {
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Container(
               height: 100,
@@ -72,63 +73,73 @@ class _HommeSrceenState extends State<HommeSrceen> {
                         itemBuilder: (context, index) {
                           return Padding(
                             padding: const EdgeInsets.only(bottom: 8.0),
-                            child: Container(
-                              height: MediaQuery.of(context).size.height / 3,
-                              width: 270,
-                              // decoration: BoxDecoration(color: Colors.yellow),
-                              child: Card(
-                                elevation: 7,
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      height:
-                                          MediaQuery.of(context).size.height /
-                                                  3 -
-                                              100,
-                                      width: MediaQuery.of(context).size.width,
-                                      decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                              image: NetworkImage(
-                                                  dataInformation[index].image),
-                                              fit: BoxFit.cover),
-                                          color: Colors.green),
-                                    ),
-                                    Expanded(
-                                      child: Container(
+                            child: InkWell(
+                              onTap: () {},
+                              child: Container(
+                                height: MediaQuery.of(context).size.height / 3,
+                                width: 230,
+                                // decoration: BoxDecoration(color: Colors.yellow),
+                                child: Card(
+                                  elevation: 7,
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        height:
+                                            MediaQuery.of(context).size.height /
+                                                    3 -
+                                                100,
                                         width:
                                             MediaQuery.of(context).size.width,
-                                        // decoration:
-                                        //     BoxDecoration(color: Colors.green[300]),
-                                        child: Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceAround,
-                                            children: [
-                                              Text(dataInformation[index].title,
-                                                  style: TextStyle(
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontSize: 20)),
-                                              Container(
-                                                  child: Row(
-                                                children: [
-                                                  Text(dataInformation[index]
-                                                      .siteWeb),
-                                                  SizedBox(
-                                                    width: 5,
-                                                  ),
-                                                  Text('${index + 1} min')
-                                                ],
-                                              ))
-                                            ],
+                                        decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                                image: NetworkImage(
+                                                    dataInformation[index]
+                                                        .image),
+                                                fit: BoxFit.cover),
+                                            color: Colors.green),
+                                      ),
+                                      Expanded(
+                                        child: Container(
+                                          width:
+                                              MediaQuery.of(context).size.width,
+                                          // decoration:
+                                          //     BoxDecoration(color: Colors.green[300]),
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceAround,
+                                              children: [
+                                                Text(
+                                                    dataInformation[index]
+                                                        .title,
+                                                    overflow: TextOverflow
+                                                        .ellipsis,
+                                                    maxLines: 2,
+                                                    style: TextStyle(
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontSize: 20)),
+                                                Container(
+                                                    child: Row(
+                                                  children: [
+                                                    Text(dataInformation[index]
+                                                        .siteWeb),
+                                                    SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    Text('${index + 1} min')
+                                                  ],
+                                                ))
+                                              ],
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                    )
-                                  ],
+                                      )
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
@@ -166,7 +177,7 @@ class _HommeSrceenState extends State<HommeSrceen> {
                                               children: [
                                                 Container(
                                                   height: 40,
-                                                  width: 60,
+                                                  width: 50,
                                                   decoration: BoxDecoration(
                                                       color: Colors.white),
                                                   child: Row(
@@ -188,7 +199,7 @@ class _HommeSrceenState extends State<HommeSrceen> {
                                                 ),
                                                 Container(
                                                   height: 40,
-                                                  width: 60,
+                                                  width: 50,
                                                   decoration: BoxDecoration(
                                                       color: Colors.white),
                                                   child: Row(

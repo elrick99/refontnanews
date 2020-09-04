@@ -27,7 +27,7 @@ class _BottomBarState extends State<BottomBar> {
       body: page[_index],
       bottomNavigationBar: FloatingNavbar(
           backgroundColor: Colors.white,
-          selectedItemColor: Color(0xff562fbe),
+          selectedItemColor: Color(0xFF777FFF),
           unselectedItemColor: Color(0xff292929),
           onTap: (int val) => setState(() => _index = val),
           currentIndex: _index,
@@ -35,25 +35,25 @@ class _BottomBarState extends State<BottomBar> {
             FloatingNavbarItem(
                 icon: Icon(
                   Icons.replay,
-                  color: (_index == 0) ? Color(0xff562fbe) : Colors.grey,
+                  color: (_index == 0) ? Color(0xFF777FFF) : Colors.grey,
                 ),
-                title: 'Actualiser'),
+                title: 'Rafraichir'),
             FloatingNavbarItem(
                 icon: Icon(
                   Icons.video_label,
-                  color: (_index == 1) ? Color(0xff562fbe) : Colors.grey,
+                  color: (_index == 1) ? Color(0xFF777FFF) : Colors.grey,
                 ),
                 title: 'Video'),
             FloatingNavbarItem(
                 icon: Icon(
                   Icons.video_library,
-                  color: (_index == 2) ? Color(0xff562fbe) : Colors.grey,
+                  color: (_index == 2) ? Color(0xFF777FFF) : Colors.grey,
                 ),
                 title: 'Clips'),
             FloatingNavbarItem(
                 icon: Icon(
                   Icons.person,
-                  color: (_index == 3) ? Color(0xff562fbe) : Colors.grey,
+                  color: (_index == 3) ? Color(0xFF777FFF) : Colors.grey,
                 ),
                 title: 'Moi'),
           ]),
