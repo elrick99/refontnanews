@@ -77,8 +77,8 @@ class CoteD extends StatelessWidget {
                                 height: 40,
                                 width: 80,
                                 decoration: BoxDecoration(
-                                  color: Colors.blue,
-                                  borderRadius: BorderRadius.circular(100)
+                                 color: Color(0xFF777FFF).withOpacity(0.8),
+                                  borderRadius: BorderRadius.circular(10)
                                 ),
                              child: Row(
                                children: <Widget>[
@@ -86,7 +86,7 @@ class CoteD extends StatelessWidget {
                                  Container(
                                  child: Text(provider.jaime.toString(),
                               style: TextStyle(fontSize: 15,
-                              color: Colors.grey
+                              color: Colors.white
                               ),
                               )
                             ),
@@ -99,7 +99,7 @@ class CoteD extends StatelessWidget {
                                 width: 80,
                                 decoration: BoxDecoration(
                                   color: Colors.grey.shade300,
-                                  borderRadius: BorderRadius.circular(100)
+                                  borderRadius: BorderRadius.circular(10)
                                 ),
                              child: Row(
                                children: <Widget>[
@@ -167,6 +167,7 @@ class CoteD extends StatelessWidget {
                               ),
                             child: Center(child: IconButton(icon: Icon(Icons.notification_important, color: Colors.red,), onPressed: (){})), 
                           ),
+                          SizedBox(width: 3,),
                                Container(
                             
                             child: Center(child: Text("S'abonner",
@@ -192,12 +193,12 @@ class CoteD extends StatelessWidget {
                              Padding(padding: const EdgeInsets.all(10),
                              child: Container(
                               height: 100,
-                              width: 170,
+                              width: 200,
                                
                                decoration: BoxDecoration(
                                  
                                  borderRadius: BorderRadius.circular(20),
-                                 border: Border.all(color: Colors.black),
+                                 border: Border.all(color: Colors.grey),
                                 image: DecorationImage(image: AssetImage(providers.items[index].imagePro),
                                 fit: BoxFit.cover
                                 )

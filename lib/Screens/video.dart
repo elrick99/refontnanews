@@ -191,114 +191,197 @@ class _VideoState extends State<Video> {
                   ],
                 ),
               ),
-                
                 Expanded(
-                  child: Container(
+                  flex: 3,
+                child: Container(
                  decoration: BoxDecoration(
-                   border: Border.all(color: Colors.white)
+                  
+                
                  ),
-                    child: ListView.builder(
-                       itemCount: datachaine.length,
-                      itemBuilder: (context, index){
+                  // child: ListView.builder(
+                  //    itemCount: datachaine.length,
+                  //   itemBuilder: (context, index){
 
-                        return Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            height: 200,
-                            width: 200,
-                            decoration: BoxDecoration(
-                             
-                              border: Border.all(color: Colors.grey)
-                            ),
-                            child: Expanded(
-                              child: Column(
-                                children: [
-                                  Expanded(
-                                    flex: 2,
-                                    child: InkWell(
-                                      onTap: (){
-                                         Navigator.of(context).pushNamed(CoteD.routeName, arguments:datachaine[index].id );
-                                      },
-                                      child: Container(
-                                        
-                                         decoration: BoxDecoration(
-                                            image: DecorationImage(image: AssetImage(datachaine[index].chaine,), fit: BoxFit.cover),
-                                //border: Border.all(color: Colors.black)
-                              ),
-                                      ),
-                                    ),
-                                  ),
-                                     Expanded(
-                                       flex: 1,
-                                       child: Container(
-                               
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Container(
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Text(datachaine[index].chaineName),
-                                    ),
-                                  ),
-                                   Container(
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: IconButton(icon: Icon(Icons.chat), onPressed: null),
-                                    ),
-                                  ),
-                                     Container(
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: IconButton(icon: Icon(Icons.favorite_border), onPressed: null),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                                  ),
-                                     ),
-                                ],
-                              ),
-                           ),
-                          ),
-                        );
-                      }
-                    ),
-                    
-                   
-                    // child: GridView.builder(
-                     
-                    //   itemCount: datachaine.length,
-                    //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    //     crossAxisCount: 2,
-                    //     childAspectRatio: 1,
+                  //     return Padding(
+                  //       padding: const EdgeInsets.all(8.0),
                         
-                    //     mainAxisSpacing: 0), 
-                    //   itemBuilder: (BuildContext cxt , int i)=> Card(
-                    //       child: InkWell(
-                    //         onTap: (){
-                    //            Navigator.of(context).pushNamed(CoteD.routeName, arguments:datachaine[i].id );
-                    //         },
-                    //         child: Container(
-                    //           decoration: BoxDecoration(
-                    //             borderRadius: BorderRadius.circular(10),
-                    //             border: Border.all(color: Colors.black)
-                    //           ),
-                    //           child: GridTile(
-                    //  child: Image.asset(datachaine[i].chaine, fit: BoxFit.cover,),
-                    //   //         footer: GridTileBar(        
-                    //   //         backgroundColor: Colors.black54,
-                     
-                              
-                    //   // )
-                    //           ),
-                    //         ),
-                    //       ),
-                    //     )
+                  //         child: Container(
+                  //           height: 200,
+                  //           width: 150,
+                  //           decoration: BoxDecoration(
+                  //             borderRadius: BorderRadius.circular(10),
+                  //             border: Border.all(color: Colors.grey)
+                  //           ),
+                  //           child: Expanded(
+                  //             child: Row(
+                  //               children: [
+                  //                 Expanded(
+                  //                   flex: 2,
+                  //                   child: InkWell(
+                  //                     onTap: (){
+                  //                        Navigator.of(context).pushNamed(CoteD.routeName, arguments:datachaine[index].id );
+                  //                     },
+                                      
+                                         
+                  //                       child: Container(
+                                            
+                  //                          decoration: BoxDecoration(
+                  //                             borderRadius: BorderRadius.circular(10),
+                  //                             image: DecorationImage(image: AssetImage(datachaine[index].chaine,), fit: BoxFit.cover),
+                  //               //border: Border.all(color: Colors.black)
+                  //             ),
+                  //                       ),
+                                      
+                  //                   ),
+                  //                 ),
+                  //                    Expanded(
+                  //                      flex: 1,
+                  //                      child: Container(
+                               
+                  //             child: Column(
+                  //              crossAxisAlignment: CrossAxisAlignment.start,
+                  //              mainAxisAlignment: MainAxisAlignment.center,
+                  //               children: [
+                  //                 Padding(
+                  //                   padding: const EdgeInsets.all(2),
+                  //                   child: Container(
+                  //                     child: Text(datachaine[index].chaineName),
+                  //                   ),
+                  //                 ),
+                  //                  Padding(
+                  //                    padding: const EdgeInsets.all(2),
+                  //                    child: Row(
+                  //                      children: [
+                  //                        Container(
+                  //                         child:  Icon(Icons.chat, color: Colors.grey,),
+                  //                 ),
+                  //                 SizedBox(width: 10,),
+                  //                        Container(
+                  //                         child: Text(datachaine[index].commentaire.toString()),
+                  //                 ),
+                  //                      ],
+                  //                    ),
+                  //                  ),
+                  //                    Padding(
+                  //                      padding: const EdgeInsets.all(2),
+                  //                      child: Row(
+                  //                        children: [
+                  //                          Container(
+                  //                   child: Icon(Icons.favorite_border, color: Colors.grey,),
+                  //                 ),
+                  //                 SizedBox(width: 10,),
+                  //                         Container(
+                  //                   child: Text(datachaine[index].jaime.toString())
+                  //                 ),
+                  //                        ],
+                  //                      ),
+                  //                    ),
+                  //               ],
+                  //             ),
+                  //                 ),
+                  //                    ),
+                  //               ],
+                  //             ),
+                  //          ),
+                  //         ),
+                        
+                  //     );
+                  //   }
+                  // ),
+                  
+                 
+                  child: GridView.builder(
+                   
+                    itemCount: datachaine.length,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      childAspectRatio: 0.8,
                       
-                    //   ),
+                      mainAxisSpacing: 10), 
+                    itemBuilder: (BuildContext cxt , int i)=> Card(
+                        child: InkWell(
+                          onTap: (){
+                             Navigator.of(context).pushNamed(CoteD.routeName, arguments:datachaine[i].id );
+                          },
+                          child: Container(
+                            // decoration: BoxDecoration(
+                            //   borderRadius: BorderRadius.circular(10),
+                            //   border: Border.all(color: Colors.black)
+                            // ),
+                  //           child: GridTile(
+                  // //  child: Image.asset(datachaine[i].chaine, fit: BoxFit.cover,),
+                  //           footer: GridTileBar(        
+                             
+                   
+                            
+                  //    )
+                  //           ),
+                  child: Column(
+                    children: [
+                        Expanded(
+                          flex: 2,
+                          child: Container(
+                           decoration: BoxDecoration(
+                             
+                             image: DecorationImage(image: AssetImage(datachaine[i].chaine ,))
+                           ),
+                          )),
+                          Expanded(child: Container(
+                               decoration:BoxDecoration(
+                                 color: Color(0xFF777FFF).withOpacity(0.5),
+                               ) ,
+                             
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                              
+                                Expanded(
+                                  child: Container(
+                                    alignment: Alignment.centerLeft,
+                                   
+                                    
+                                   
+                                 child: Padding(
+                                   padding: const EdgeInsets.only(left: 3),
+                                   child: Icon(Icons.favorite_border, color: Colors.white,),
+                                 ),
+                                  ),
+                                ),
+                                   Expanded(
+                                   child: Container(
+                                    alignment: Alignment.centerLeft,
+                                    
+                                    
+                                   
+                                child: Text(datachaine[i].chaineName,
+                                style: TextStyle(
+                                  color: Colors.white
+                                ),
+                                ),
+                                ),
+                                 ),
+                                 Expanded(
+                                   child: Container(
+                                    alignment: Alignment.centerLeft,
+                                    
+                                    
+                                   
+                                child: Icon(Icons.chat, color: Colors.white,),
+                                ),
+                                 )
+                              ],
+                            ),
+                          ))
+                    ],
                   ),
+                          ),
+                        ),
+                      )
+                    
+                    ),
                 ),
+                )
+            
               ],
             ),
           ),
