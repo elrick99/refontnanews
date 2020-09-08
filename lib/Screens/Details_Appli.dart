@@ -454,6 +454,8 @@ class _DetailAppliState extends State<DetailAppli> {
                                       ),
                                     ],
                                   ),
+
+                                  
                                   Container(
                                     height: 200,
                                     child: ListView(
@@ -825,6 +827,10 @@ class _DetailAppliState extends State<DetailAppli> {
                                       ],
                                     ),
                                   ),
+
+
+
+
                                   Divider(
                                     height: 4,
                                   ),

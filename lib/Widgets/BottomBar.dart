@@ -1,6 +1,7 @@
 import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:refontnanews/Screens/Home_Screen.dart';
+import 'package:refontnanews/Screens/video.dart';
 
 class BottomBar extends StatefulWidget {
   @override
@@ -11,7 +12,7 @@ class _BottomBarState extends State<BottomBar> {
   List<Widget> page = [
     HommeSrceen(),
     Center(
-      child: Text('Page2'),
+      child: Video(),
     ),
     Center(
       child: Text('Page3'),
