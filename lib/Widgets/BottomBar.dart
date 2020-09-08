@@ -1,6 +1,8 @@
 import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:refontnanews/Screens/Discussion.dart';
 import 'package:refontnanews/Screens/Home_Screen.dart';
+import 'package:refontnanews/Screens/MonCompte.dart';
 import 'package:refontnanews/Screens/video.dart';
 
 class BottomBar extends StatefulWidget {
@@ -9,18 +11,7 @@ class BottomBar extends StatefulWidget {
 }
 
 class _BottomBarState extends State<BottomBar> {
-  List<Widget> page = [
-    HommeSrceen(),
-    Center(
-      child: Video(),
-    ),
-    Center(
-      child: Text('Page3'),
-    ),
-    Center(
-      child: Text('Page4'),
-    )
-  ];
+  List<Widget> page = [HommeSrceen(), Video(), DIscussion(), MonCompte()];
   int _index = 0;
   @override
   Widget build(BuildContext context) {
@@ -47,10 +38,10 @@ class _BottomBarState extends State<BottomBar> {
                 title: 'Video'),
             FloatingNavbarItem(
                 icon: Icon(
-                  Icons.video_library,
+                  Icons.mode_comment,
                   color: (_index == 2) ? Color(0xFF777FFF) : Colors.grey,
                 ),
-                title: 'Clips'),
+                title: 'Disc'),
             FloatingNavbarItem(
                 icon: Icon(
                   Icons.person,

@@ -43,11 +43,15 @@ class _MonCompteState extends State<MonCompte> {
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 CircleAvatar(
+                                  backgroundColor: Colors.cyan,
                                   maxRadius: 30,
-                                  child:
-                                      Icon(Icons.fastfood, color: Colors.white),
+                                  child: Text('G',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white,
+                                          fontSize: 35)),
                                 ),
-                                Text('FaceBook')
+                                Text('Google')
                               ],
                             ),
                             // color: Colors.blue,
@@ -65,7 +69,7 @@ class _MonCompteState extends State<MonCompte> {
                                     child: Icon(Icons.phone_android,
                                         color: Colors.white),
                                   ),
-                                  Text('FaceBook')
+                                  Text('Telephone')
                                 ],
                               ),
                               // color: Colors.blue,
@@ -80,10 +84,13 @@ class _MonCompteState extends State<MonCompte> {
                                     MainAxisAlignment.spaceAround,
                                 children: [
                                   CircleAvatar(
-                                    backgroundColor: Colors.cyan,
+                                    backgroundColor: Colors.blue,
                                     maxRadius: 30,
-                                    child: Icon(Icons.fastfood,
-                                        color: Colors.white),
+                                    child: Text('f',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.white,
+                                            fontSize: 35)),
                                   ),
                                   Text('FaceBook')
                                 ],

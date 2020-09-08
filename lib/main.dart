@@ -5,6 +5,7 @@ import 'package:refontnanews/Providers/Services/Chaines.dart';
 import 'package:refontnanews/Providers/Services/Informations.dart';
 import 'package:refontnanews/Providers/Services/details.dart';
 import 'package:refontnanews/Screens/Details_Appli.dart';
+import 'package:refontnanews/Screens/Discussion.dart';
 import 'package:refontnanews/Screens/Home_Screen.dart';
 import 'package:refontnanews/Screens/chainePays.dart';
 import 'package:refontnanews/Screens/chainePaysB.dart';
@@ -43,15 +44,15 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        // home: WebWiew(),
-        home:  BottomBar(),
+        // home: DIscussion(),
+        home: BottomBar(),
         routes: {
-            CoteD.routeName:(context)=>CoteD(),
-            "chainePaysCa":(context)=>ChainePaysCa(),
-            "chainePaysC":(context)=>ChainePaysC(),
-            "chainePaysB":(context)=>ChainePaysB(),
-            "chainePaysG":(context)=>ChainePaysG(),
-            "chainePays":(context)=>ChainePays(),
+          CoteD.routeName: (context) => CoteD(),
+          "chainePaysCa": (context) => ChainePaysCa(),
+          "chainePaysC": (context) => ChainePaysC(),
+          "chainePaysB": (context) => ChainePaysB(),
+          "chainePaysG": (context) => ChainePaysG(),
+          "chainePays": (context) => ChainePays(),
         },
       ),
     );
