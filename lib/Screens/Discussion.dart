@@ -49,7 +49,7 @@ class _DIscussionState extends State<DIscussion> {
                         child: Container(
                           height: MediaQuery.of(context).size.height / 7,
                           width: MediaQuery.of(context).size.width,
-                          decoration: BoxDecoration(color: Colors.grey[200]),
+                          decoration: BoxDecoration(color: Colors.grey[100]),
                           child: Padding(
                             padding: const EdgeInsets.only(top: 8.0),
                             child: ListTile(
@@ -61,8 +61,29 @@ class _DIscussionState extends State<DIscussion> {
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 17)),
-                              subtitle: Text('Web Designer'),
-                              trailing: Text('1$index h'),
+                              subtitle: Text(
+                                  'Web Designer la dernière sortie de Konnie Toure qui'),
+                              trailing: Column(
+                                children: [
+                                  Text('1$index h'),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Container(
+                                    height: 20,
+                                    width: 20,
+                                    decoration: BoxDecoration(
+                                        color:
+                                            Color(0xFF777FFF).withOpacity(0.8),
+                                        borderRadius: BorderRadius.circular(5)),
+                                    child: Center(
+                                        child: Text(
+                                      '${index + 1}',
+                                      style: TextStyle(color: Colors.white),
+                                    )),
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -120,7 +141,9 @@ class DataSearch extends SearchDelegate<String> {
     // show when someone searches for something
     final suggestionList = query.isEmpty
         ? listWProds
-        : listWProds.where((p) => p.title.contains(query)).toList();
+        : listWProds
+            .where((p) => p.title.toLowerCase().contains(query))
+            .toList();
 
     return ListView.builder(
       itemBuilder: (context, index) => ListTile(

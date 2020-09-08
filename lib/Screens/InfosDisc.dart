@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_chat_bubble/bubble_type.dart';
+import 'package:flutter_chat_bubble/chat_bubble.dart';
+import 'package:flutter_chat_bubble/clippers/chat_bubble_clipper_5.dart';
 
 class Message extends StatelessWidget {
   @override
@@ -16,128 +19,17 @@ class Message extends StatelessWidget {
         body: Column(
           children: <Widget>[
             Expanded(
-                child: ListView(
-              children: <Widget>[
-                ListTile(
-                  leading: CircleAvatar(
-                      backgroundColor: Color(0xFF777FFF),
-                      child: Icon(
-                        Icons.person,
-                        color: Colors.white,
-                      )),
-                  title: Container(
-                      decoration: BoxDecoration(
-                          color: Colors.grey[200],
-                          borderRadius: BorderRadius.all(Radius.circular(10))),
-                      child: Column(
-                        children: <Widget>[
-                          Row(
-                            children: <Widget>[
-                              Container(
-                                width: 150,
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text("Bonjour"),
-                                ),
-                              )
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: <Widget>[
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  "16h45",
-                                  style: TextStyle(fontSize: 10),
-                                ),
-                              )
-                            ],
-                          )
-                        ],
-                      )),
-                ),
-                ListTile(
-                  trailing: CircleAvatar(
-                      backgroundColor: Color(0xFF777FFF),
-                      child: Icon(
-                        Icons.person,
-                        color: Colors.white,
-                      )),
-                  title: Container(
-                      decoration: BoxDecoration(
-                          color: Colors.grey[200],
-                          borderRadius: BorderRadius.all(Radius.circular(10))),
-                      child: Column(
-                        children: <Widget>[
-                          Row(
-                            children: <Widget>[
-                              Container(
-                                width: 150,
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(
-                                      " deserunt voluptates!Soluta similique ipsa ex itaque minima saepe quae mollitia eveniet voluptatibus quas, amet deserunt laborum labore et quibusdam quia, totam esse ipsum ullam assumenda repellendus! Quos quaerat neque ipsam commodi."),
-                                ),
-                              )
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: <Widget>[
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  "16h45",
-                                  style: TextStyle(fontSize: 10),
-                                ),
-                              )
-                            ],
-                          )
-                        ],
-                      )),
-                ),
-                ListTile(
-                  leading: CircleAvatar(
-                      backgroundColor: Color(0xFF777FFF),
-                      child: Icon(
-                        Icons.person,
-                        color: Colors.white,
-                      )),
-                  title: Container(
-                      decoration: BoxDecoration(
-                          color: Colors.grey[200],
-                          borderRadius: BorderRadius.all(Radius.circular(10))),
-                      child: Column(
-                        children: <Widget>[
-                          Row(
-                            children: <Widget>[
-                              Container(
-                                width: 150,
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(
-                                      "voluptatibus quas, amet deserunt laborum labore et quibusdam quia, totam esse ipsum ullam assumenda repellendus! Quos quaerat neque ipsam commodi."),
-                                ),
-                              )
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: <Widget>[
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  "16h45",
-                                  style: TextStyle(fontSize: 10),
-                                ),
-                              )
-                            ],
-                          )
-                        ],
-                      )),
-                ),
-              ],
+                child: Padding(
+              padding: const EdgeInsets.only(left: 8.0, right: 8.0),
+              child: ListView(children: [
+                getSenderView(
+                    ChatBubbleClipper5(type: BubbleType.sendBubble), context),
+                getReceiverView(
+                    ChatBubbleClipper5(type: BubbleType.receiverBubble),
+                    context),
+                getSenderView(
+                    ChatBubbleClipper5(type: BubbleType.sendBubble), context),
+              ]),
             )),
             Container(
               // color: Colors.grey,
@@ -181,4 +73,67 @@ class Message extends StatelessWidget {
           ],
         ));
   }
+
+  getSenderView(CustomClipper clipper, BuildContext context) => ChatBubble(
+        clipper: clipper,
+        alignment: Alignment.topRight,
+        margin: EdgeInsets.only(top: 20),
+        backGroundColor: Color(0xFF777FFF),
+        child: Container(
+          constraints: BoxConstraints(
+            maxWidth: MediaQuery.of(context).size.width * 0.7,
+          ),
+          child: Column(
+            children: [
+              Text(
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                style: TextStyle(color: Colors.white),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    '14h11 min',
+                    style: TextStyle(color: Colors.white, fontSize: 10),
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
+      );
+
+  getReceiverView(CustomClipper clipper, BuildContext context) => ChatBubble(
+        clipper: clipper,
+        backGroundColor: Color(0xffE7E7ED),
+        margin: EdgeInsets.only(top: 20),
+        child: Container(
+          constraints: BoxConstraints(
+            maxWidth: MediaQuery.of(context).size.width * 0.7,
+          ),
+          child: Column(
+            children: [
+              Text(
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+                style: TextStyle(color: Colors.black),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    '14h11 min',
+                    style: TextStyle(color: Colors.black, fontSize: 10),
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
+      );
 }

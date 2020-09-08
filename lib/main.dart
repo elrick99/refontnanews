@@ -7,6 +7,7 @@ import 'package:refontnanews/Providers/Services/details.dart';
 import 'package:refontnanews/Screens/Details_Appli.dart';
 import 'package:refontnanews/Screens/Discussion.dart';
 import 'package:refontnanews/Screens/Home_Screen.dart';
+import 'package:refontnanews/Screens/MonCompteConnect.dart';
 import 'package:refontnanews/Screens/chainePays.dart';
 import 'package:refontnanews/Screens/chainePaysB.dart';
 import 'package:refontnanews/Screens/chainePaysC.dart';
@@ -44,8 +45,8 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        // home: DIscussion(),
-        home: BottomBar(),
+        home: MonCompteConnected(),
+        // home: BottomBar(),
         routes: {
           CoteD.routeName: (context) => CoteD(),
           "chainePaysCa": (context) => ChainePaysCa(),
