@@ -65,7 +65,7 @@ class _HommeSrceenState extends State<HommeSrceen> {
                     ),
                   ),
                   Container(
-                    height: MediaQuery.of(context).size.height / 2.4,
+                    height: MediaQuery.of(context).size.height / 2.6,
                     width: MediaQuery.of(context).size.width,
                     decoration: BoxDecoration(color: Colors.white),
                     child: ListView.builder(
@@ -80,8 +80,9 @@ class _HommeSrceenState extends State<HommeSrceen> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (_) => DetailAppli(
-                                              urls: dataInformation[index].url,
-                                            )));
+                                            urls: dataInformation[index].url,
+                                            information:
+                                                dataInformation[index])));
                               },
                               child: Container(
                                 height: MediaQuery.of(context).size.height / 3,
@@ -129,16 +130,24 @@ class _HommeSrceenState extends State<HommeSrceen> {
                                                     style: TextStyle(
                                                         fontWeight:
                                                             FontWeight.bold,
-                                                        fontSize: 20)),
+                                                        fontSize: 16)),
                                                 Container(
                                                     child: Row(
                                                   children: [
-                                                    Text(dataInformation[index]
-                                                        .siteWeb),
+                                                    Text(
+                                                      dataInformation[index]
+                                                          .siteWeb,
+                                                      style: TextStyle(
+                                                          color:
+                                                              Colors.grey[300]),
+                                                    ),
                                                     SizedBox(
                                                       width: 5,
                                                     ),
-                                                    Text('${index + 1} min')
+                                                    Text('${index + 1} min',
+                                                        style: TextStyle(
+                                                            color: Colors
+                                                                .grey[300]))
                                                   ],
                                                 ))
                                               ],
@@ -163,6 +172,7 @@ class _HommeSrceenState extends State<HommeSrceen> {
                                   MaterialPageRoute(
                                       builder: (_) => DetailAppli(
                                             urls: e.url,
+                                            information: e,
                                           ))),
                               child: Container(
                                 height: MediaQuery.of(context).size.height / 5,
@@ -187,7 +197,7 @@ class _HommeSrceenState extends State<HommeSrceen> {
                                                   style: TextStyle(
                                                       fontWeight:
                                                           FontWeight.bold,
-                                                      fontSize: 20)),
+                                                      fontSize: 16)),
                                             ),
                                             Container(
                                               child: Row(
@@ -204,13 +214,14 @@ class _HommeSrceenState extends State<HommeSrceen> {
                                                       children: [
                                                         Icon(Icons.thumb_up,
                                                             size: 20,
-                                                            color: Colors.grey),
+                                                            color: Colors
+                                                                .grey[300]),
                                                         Text(
                                                             e.countLike
                                                                 .toString(),
                                                             style: TextStyle(
                                                                 color: Colors
-                                                                    .grey))
+                                                                    .grey[300]))
                                                       ],
                                                     ),
                                                   ),
@@ -226,25 +237,26 @@ class _HommeSrceenState extends State<HommeSrceen> {
                                                       children: [
                                                         Icon(Icons.comment,
                                                             size: 20,
-                                                            color: Colors.grey),
+                                                            color: Colors
+                                                                .grey[300]),
                                                         Text(
                                                             e.countComment
                                                                 .toString(),
                                                             style: TextStyle(
                                                                 color: Colors
-                                                                    .grey))
+                                                                    .grey[300]))
                                                       ],
                                                     ),
                                                   ),
                                                   Container(
-                                                    child: Text(
-                                                        e.siteWeb.trimRight(),
+                                                    child: Text(e.siteWeb,
                                                         maxLines: 1,
                                                         overflow: TextOverflow
                                                             .ellipsis,
                                                         style: TextStyle(
-                                                            color:
-                                                                Colors.grey)),
+                                                            color: Colors
+                                                                .grey[300],
+                                                            fontSize: 12)),
                                                   )
                                                 ],
                                               ),
@@ -283,6 +295,7 @@ class _HommeSrceenState extends State<HommeSrceen> {
                                   MaterialPageRoute(
                                       builder: (_) => DetailAppli(
                                             urls: dataInformation[index].url,
+                                            information: dataInformation[index],
                                           ))),
                               child: Container(
                                 height: MediaQuery.of(context).size.height / 3,
@@ -326,9 +339,13 @@ class _HommeSrceenState extends State<HommeSrceen> {
                                                     style: TextStyle(
                                                         fontWeight:
                                                             FontWeight.bold,
-                                                        fontSize: 20)),
-                                                Text(dataInformation[index]
-                                                    .siteWeb)
+                                                        fontSize: 16)),
+                                                Text(
+                                                    dataInformation[index]
+                                                        .siteWeb,
+                                                    style: TextStyle(
+                                                      color: Colors.grey,
+                                                    ))
                                               ],
                                             ),
                                           ),

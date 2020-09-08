@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'package:refontnanews/Providers/Models/Commentaire.dart';
 
 class Information with ChangeNotifier {
   final int idInfo;
@@ -10,6 +11,7 @@ class Information with ChangeNotifier {
   final int countLike;
   final int countComment;
   final String date;
+  final List<Commentaire> comment;
 
   Information(
       {this.idInfo,
@@ -20,5 +22,6 @@ class Information with ChangeNotifier {
       this.url,
       this.countLike,
       this.countComment,
-      this.date});
+      this.date,
+      this.comment});
 }

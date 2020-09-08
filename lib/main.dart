@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:refontnanews/Providers/Services/Chaines.dart';
 import 'package:refontnanews/Providers/Services/Informations.dart';
@@ -24,6 +25,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
+      statusBarColor: Color(0xFF777FFF), //or set color with: Color(0xFF0000FF)
+    ));
     return MultiProvider(
       providers: [
         ChangeNotifierProvider.value(
