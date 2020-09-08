@@ -194,37 +194,109 @@ class _VideoState extends State<Video> {
                 
                 Expanded(
                   child: Container(
-                    child: GridView.builder(
-                      padding: const EdgeInsets.all(10),
-                      itemCount: datachaine.length,
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        childAspectRatio: 3/2,
-                        crossAxisSpacing: 10,
-                        mainAxisSpacing: 10), 
-                      itemBuilder: (BuildContext cxt , int i)=> Card(
-                          child: InkWell(
-                            onTap: (){
-                               Navigator.of(context).pushNamed(CoteD.routeName, arguments:datachaine[i].id );
-                            },
-                            child: Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                border: Border.all(color: Colors.black)
+                 decoration: BoxDecoration(
+                   border: Border.all(color: Colors.white)
+                 ),
+                    child: ListView.builder(
+                       itemCount: datachaine.length,
+                      itemBuilder: (context, index){
+
+                        return Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            height: 200,
+                            width: 200,
+                            decoration: BoxDecoration(
+                             
+                              border: Border.all(color: Colors.grey)
+                            ),
+                            child: Expanded(
+                              child: Column(
+                                children: [
+                                  Expanded(
+                                    flex: 2,
+                                    child: InkWell(
+                                      onTap: (){
+                                         Navigator.of(context).pushNamed(CoteD.routeName, arguments:datachaine[index].id );
+                                      },
+                                      child: Container(
+                                        
+                                         decoration: BoxDecoration(
+                                            image: DecorationImage(image: AssetImage(datachaine[index].chaine,), fit: BoxFit.cover),
+                                //border: Border.all(color: Colors.black)
                               ),
-                              child: GridTile(
-                     child: Image.asset(datachaine[i].chaine, fit: BoxFit.cover,),
-                              footer: GridTileBar(        
-                              backgroundColor: Colors.black54,
+                                      ),
+                                    ),
+                                  ),
+                                     Expanded(
+                                       flex: 1,
+                                       child: Container(
+                               
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Container(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text(datachaine[index].chaineName),
+                                    ),
+                                  ),
+                                   Container(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: IconButton(icon: Icon(Icons.chat), onPressed: null),
+                                    ),
+                                  ),
+                                     Container(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: IconButton(icon: Icon(Icons.favorite_border), onPressed: null),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                                  ),
+                                     ),
+                                ],
+                              ),
+                           ),
+                          ),
+                        );
+                      }
+                    ),
+                    
+                   
+                    // child: GridView.builder(
+                     
+                    //   itemCount: datachaine.length,
+                    //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    //     crossAxisCount: 2,
+                    //     childAspectRatio: 1,
+                        
+                    //     mainAxisSpacing: 0), 
+                    //   itemBuilder: (BuildContext cxt , int i)=> Card(
+                    //       child: InkWell(
+                    //         onTap: (){
+                    //            Navigator.of(context).pushNamed(CoteD.routeName, arguments:datachaine[i].id );
+                    //         },
+                    //         child: Container(
+                    //           decoration: BoxDecoration(
+                    //             borderRadius: BorderRadius.circular(10),
+                    //             border: Border.all(color: Colors.black)
+                    //           ),
+                    //           child: GridTile(
+                    //  child: Image.asset(datachaine[i].chaine, fit: BoxFit.cover,),
+                    //   //         footer: GridTileBar(        
+                    //   //         backgroundColor: Colors.black54,
                      
                               
-                      )
-                              ),
-                            ),
-                          ),
-                        )
+                    //   // )
+                    //           ),
+                    //         ),
+                    //       ),
+                    //     )
                       
-                      ),
+                    //   ),
                   ),
                 ),
               ],

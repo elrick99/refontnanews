@@ -27,8 +27,8 @@ class Chaines with ChangeNotifier{
           ChaineModel(
       id: 2,
       chaineName: "RTI3",
-      chaine: "images/RTI3.jpg",
-      imagePro: "images/RTI3.jpg",
+      chaine: "images/RTI3.png",
+      imagePro: "images/RTI3.png",
       jaime: 100,
       commentaire: 12,
       partage: 2,
@@ -36,8 +36,8 @@ class Chaines with ChangeNotifier{
     ),
           ChaineModel(
       id: 3,
-      chaineName: "RTI2",
-      chaine: "images/RTI3.png",
+      chaineName: "Live tv",
+      chaine: "images/GHA4.jpg",
       imagePro: "images/RTI3.png",
       jaime: 600,
       commentaire: 42,
