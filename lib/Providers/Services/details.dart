@@ -12,7 +12,8 @@ class Details with ChangeNotifier{
       jaime: 100,
       commentaire: 12,
       partage: 2,
-      pays: "Toute les chaine"
+      pays: "Toute les chaine",
+      emission:"images/cafilm.jpg"
       
     ),
         ChaineDModel(
@@ -22,27 +23,30 @@ class Details with ChangeNotifier{
       jaime: 290,
       commentaire: 120,
       partage: 4,
-       pays: "Cote d'Ivoire"
+       pays: "Cote d'Ivoire",
+       emission:"images/spcam.jpg"
       
     ),
          ChaineDModel(
       idD: 2,
       chaineName: "RTI3",
-      imagePro: "images/RTI3.jpg",
+      imagePro: "images/RTI3.png",
       jaime: 100,
       commentaire: 12,
       partage: 2,
-       pays: "Burkina-Faso"
+       pays: "Burkina-Faso",
+       emission:"images/emica.jpg"
       
     ),
          ChaineDModel(
       idD: 3,
-      chaineName: "RTI2",
-      imagePro: "images/RTI3.png",
+      chaineName: "LiveTv",
+      imagePro: "images/GHA4.jpg",
       jaime: 600,
       commentaire: 42,
       partage: 5,
-       pays: "Ghana"
+       pays: "Ghana",
+        emission:"images/cafilm.jpg"
       
     ),
           ChaineDModel(
@@ -52,7 +56,8 @@ class Details with ChangeNotifier{
       jaime: 500,
       commentaire: 62,
       partage: 20,
-       pays: "Cameroune"
+       pays: "Cameroune",
+       emission:"images/cafilm.jpg"
       
     ),
           ChaineDModel(
@@ -62,7 +67,8 @@ class Details with ChangeNotifier{
       jaime: 500,
       commentaire: 25,
       partage: 7,
-       pays: "Canal"
+       pays: "Canal",
+       emission:"images/cafilm.jpg"
     ),
          ChaineDModel(
       idD: 6,
@@ -71,6 +77,7 @@ class Details with ChangeNotifier{
       jaime: 200,
       commentaire: 12,
       partage: 2,
+      emission:"images/cafilm.jpg"
       
     ),
          ChaineDModel(
@@ -80,6 +87,7 @@ class Details with ChangeNotifier{
       jaime: 700,
       commentaire: 14,
       partage: 2,
+      emission:"images/cafilm.jpg"
       
     ),
            ChaineDModel(
@@ -89,6 +97,7 @@ class Details with ChangeNotifier{
       jaime: 400,
       commentaire: 122,
       partage: 3,
+      emission:"images/cafilm.jpg"
       
     ),
               ChaineDModel(
@@ -98,6 +107,7 @@ class Details with ChangeNotifier{
       jaime: 400,
       commentaire: 122,
       partage: 3,
+      emission:"images/cafilm.jpg"
       
     ),
                ChaineDModel(
@@ -107,6 +117,7 @@ class Details with ChangeNotifier{
       jaime: 100,
       commentaire: 22,
       partage: 32,
+      emission:"images/cafilm.jpg"
       
     ),
                   ChaineDModel(
@@ -116,6 +127,7 @@ class Details with ChangeNotifier{
       jaime: 40,
       commentaire: 2,
       partage: 3,
+      emission:"images/cafilm.jpg"
       
     ),
                 ChaineDModel(
@@ -125,7 +137,7 @@ class Details with ChangeNotifier{
       jaime: 40,
       commentaire: 2,
       partage: 3,
-      
+      emission:"images/cafilm.jpg"
     ),
                ChaineDModel(
       idD: 12,
@@ -134,6 +146,7 @@ class Details with ChangeNotifier{
       jaime: 500,
       commentaire: 200,
       partage: 35,
+      emission:"images/cafilm.jpg"
       
     ),
                ChaineDModel(
@@ -143,6 +156,7 @@ class Details with ChangeNotifier{
       jaime: 300,
       commentaire: 100,
       partage: 35,
+      emission:"images/cafilm.jpg"
       
     ),
                ChaineDModel(
@@ -152,6 +166,7 @@ class Details with ChangeNotifier{
       jaime: 500,
       commentaire: 10,
       partage: 35,
+      emission:"images/cafilm.jpg"
       
     ),
                  ChaineDModel(
@@ -161,6 +176,7 @@ class Details with ChangeNotifier{
       jaime: 600,
       commentaire: 100,
       partage: 35,
+      emission:"images/cafilm.jpg"
       
     ),
                 ChaineDModel(
@@ -170,6 +186,7 @@ class Details with ChangeNotifier{
       jaime: 600,
       commentaire: 100,
       partage: 35,
+      emission:"images/cafilm.jpg"
       
     ),
                ChaineDModel(
@@ -179,6 +196,7 @@ class Details with ChangeNotifier{
       jaime: 100,
       commentaire: 20,
       partage: 3,
+      emission:"images/cafilm.jpg"
       
     ),
                 ChaineDModel(
@@ -188,6 +206,7 @@ class Details with ChangeNotifier{
       jaime: 200,
       commentaire: 100,
       partage: 5,
+      emission:"images/cafilm.jpg"
       
     ),
     

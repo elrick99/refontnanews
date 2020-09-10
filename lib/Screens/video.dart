@@ -1,58 +1,3 @@
-// import 'package:flutter/material.dart';
-
-// class Video extends StatelessWidget {
-//    int _index = 0;
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//        body: DefaultTabController(
-//         length: 6,
-//         child: Column(
-//           children: <Widget>[
-//             Container(
-//               constraints: BoxConstraints.expand(height: 50),
-//               child: TabBar(tabs: [
-//                 Tab(text: "Toute les chaine"),
-//                 Tab(text: "Cote D'Ivoire"),
-//                 Tab(text: "Burkina-faso"),
-//                  Tab(text: "Ghana"),
-//                 Tab(text: "Cameroune"),
-//                 Tab(text: "Canal"),
-//               ]),
-//             ),
-//             Expanded(
-//               child: Container(
-//                 child: TabBarView(children: [
-//                   Container(
-//                     child: Text("Toute les chaine"),
-//                   ),
-//                   Container(
-//                     child: Text("Cote D'Ivoire"),
-//                   ),
-//                   Container(
-//                     child: Text("Burkina-faso"),
-//                   ),
-//                    Container(
-//                     child: Text("Ghana"),
-//                   ),
-//                    Container(
-//                     child: Text("Cameroune"),
-//                   ),
-//                    Container(
-//                     child: Text("Canal"),
-//                   ),
-//                 ]),
-//               ),
-//             )
-//           ],
-//         ),
-//       ),
-      
-      
-//     );
-//   }
-// }
-
 import "package:flutter/material.dart";
 import 'package:provider/provider.dart';
 import 'package:refontnanews/Providers/Services/Chaines.dart';
@@ -121,6 +66,9 @@ class _VideoState extends State<Video> {
                                 child: InkWell(
                                   onTap: (){
                                     Navigator.pushNamed(context, "chainePays");
+                                    setState(() {
+                                      couleur=!couleur;
+                                    });
                                   },
                                   child: Container(
                                     child: Text("Cote d'Ivoire", style: TextStyle(color: Colors.white),),
@@ -146,9 +94,10 @@ class _VideoState extends State<Video> {
                                 child: InkWell(
                                    onTap: (){
                                      Navigator.pushNamed(context, "chainePaysC");
+                                     couleur=!couleur;
                                   },
                                   child: Container(
-                                    child: Text("Cameroune", style: TextStyle(color: Colors.white),),
+                                    child: Text("Cameroune", style: TextStyle(color: (couleur)? Colors.white:Colors.grey),),
                                   ),
                                 ),
                                 
@@ -319,7 +268,7 @@ class _VideoState extends State<Video> {
                   child: Column(
                     children: [
                         Expanded(
-                          flex: 2,
+                          flex: 4,
                           child: Container(
                            decoration: BoxDecoration(
                              
@@ -327,51 +276,22 @@ class _VideoState extends State<Video> {
                            ),
                           )),
                           Expanded(child: Container(
+                             alignment: Alignment.center,
+                            width: MediaQuery.of(context).size.width,
                                decoration:BoxDecoration(
                                  color: Color(0xFF777FFF).withOpacity(0.5),
                                ) ,
                              
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                              
-                                Expanded(
-                                  child: Container(
-                                    alignment: Alignment.centerLeft,
-                                   
-                                    
-                                   
-                                 child: Padding(
-                                   padding: const EdgeInsets.only(left: 3),
-                                   child: Icon(Icons.favorite_border, color: Colors.white,),
-                                 ),
-                                  ),
-                                ),
-                                   Expanded(
-                                   child: Container(
-                                    alignment: Alignment.centerLeft,
-                                    
-                                    
-                                   
-                                child: Text(datachaine[i].chaineName,
+                            child: Text(datachaine[i].chaineName,
                                 style: TextStyle(
                                   color: Colors.white
                                 ),
-                                ),
-                                ),
-                                 ),
-                                 Expanded(
-                                   child: Container(
-                                    alignment: Alignment.centerLeft,
-                                    
-                                    
-                                   
-                                child: Icon(Icons.chat, color: Colors.white,),
-                                ),
-                                 )
-                              ],
-                            ),
-                          ))
+                                ),                           
+                              
+                               
+                            
+                          )
+                          )
                     ],
                   ),
                           ),
@@ -399,76 +319,3 @@ class _VideoState extends State<Video> {
   }
 }
 
-// Container(
-//         child: Column(
-//           children: [
-//             Container(
-//               color: Color(0xFF777FFF),
-//               height: 60,
-//               child: Column(
-//                 children: [
-//                   SizedBox(height: 20,),
-//                   Expanded(
-//                     flex: 0,
-//                     child: Container(          
-//                     height: 30,
-//                       child: ListView(
-//                             scrollDirection: Axis.horizontal,
-//                             children: [
-                             
-//                             Padding(
-//                               padding: const EdgeInsets.all(8.0),
-//                               child: Container(
-//                                 child: Text("Toute les chaine", style: TextStyle(color: Colors.white),),
-//                               ),
-                              
-//                             ),
-//                               Padding(
-//                               padding: const EdgeInsets.all(8.0),
-//                               child: Container(
-//                                 child: Text("Cote d'Ivoire", style: TextStyle(color: Colors.white),),
-//                               ),
-                              
-//                             ),
-
-//                               Padding(
-//                               padding: const EdgeInsets.all(8.0),
-//                               child: Container(
-//                                 child: Text("Burkina-faso", style: TextStyle(color: Colors.white),),
-//                               ),
-                              
-//                             ),
-//                               Padding(
-//                               padding: const EdgeInsets.all(8.0),
-//                               child: Container(
-//                                 child: Text("Cameroune", style: TextStyle(color: Colors.white),),
-//                               ),
-                              
-//                             ),
-//                               Padding(
-//                               padding: const EdgeInsets.all(8.0),
-//                               child: Container(
-//                                 child: Text("Ghana", style: TextStyle(color: Colors.white),),
-//                               ),
-                              
-//                             ),
-//                               Padding(
-//                               padding: const EdgeInsets.all(8.0),
-//                               child: Container(
-//                                 child: Text("Canal", style: TextStyle(color: Colors.white),),
-//                               ),
-                              
-//                             ),
-//                           ],
-//                           ),
-                       
-//                     ),
-//                   ),
-//                 ],
-//               ),
-//             ),
-//             Expanded(child: Container())
-
-//           ],
-//         ),
-//       ),

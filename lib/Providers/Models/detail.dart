@@ -7,6 +7,7 @@ class ChaineDModel{
   final int dure;
   final String pays;
   final int partage;
+  final String emission;
 
   ChaineDModel({
     this.idD,
@@ -16,7 +17,8 @@ class ChaineDModel{
     this.jaime,
     this.dure,
     this.pays,
-    this.partage
+    this.partage,
+    this.emission,
 
   });
 }

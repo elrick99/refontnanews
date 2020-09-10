@@ -13,6 +13,7 @@ class Chaines with ChangeNotifier{
       commentaire: 12,
       partage: 2,
       
+      
     ),
         ChaineModel(
       id: 1,
@@ -22,6 +23,7 @@ class Chaines with ChangeNotifier{
       jaime: 290,
       commentaire: 120,
       partage: 4,
+       
       
     ),
           ChaineModel(
@@ -33,6 +35,7 @@ class Chaines with ChangeNotifier{
       commentaire: 12,
       partage: 2,
       
+      
     ),
           ChaineModel(
       id: 3,
@@ -42,6 +45,7 @@ class Chaines with ChangeNotifier{
       jaime: 600,
       commentaire: 42,
       partage: 5,
+      
       
     ),
           ChaineModel(

@@ -7,6 +7,7 @@ class ChaineModel{
   final int jaime;
   final int dure;
   final int partage;
+  final String emission;
 
   ChaineModel({
     this.id,
@@ -16,7 +17,8 @@ class ChaineModel{
     this.commentaire,
     this.jaime,
     this.dure,
-    this.partage
+    this.partage,
+    this.emission
 
   });
 }

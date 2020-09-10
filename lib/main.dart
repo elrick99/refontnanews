@@ -45,8 +45,8 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: MonCompteConnected(),
-        // home: BottomBar(),
+        //home: MonCompteConnected(),
+         home: BottomBar(),
         routes: {
           CoteD.routeName: (context) => CoteD(),
           "chainePaysCa": (context) => ChainePaysCa(),
